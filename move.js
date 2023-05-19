@@ -1,12 +1,9 @@
 function move(element) {
-    element.style.position = 'fixed'
-
-    function moveToCoordinates(left, bottom) {
-        element.style.left = left + 'px'
-        element.style.bottom = bottom + 'px'
-    }
-
     return {
-        to: moveToCoordinates
-    }
-}
+      to: function(left, bottom) {
+        element.style.position = 'fixed';
+        element.style.left = left + 'px';
+        element.style.bottom = bottom + 'px';
+      }
+    };
+  }
